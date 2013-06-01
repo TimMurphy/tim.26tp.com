@@ -9,66 +9,69 @@ body {
 
 @itemBorderColor: #ccc;
 
-ul.posts {
-    margin-left: 0;
-    list-style: none;
+h1, h2, h3, h4, h5 {
+    color: green;
+}
+
+#posts {
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: @itemBorderColor;
 
-    li {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+        a:hover {
+            color: @linkColorHover;
+        }
+
+    .post {
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-bottom-color: @itemBorderColor;
-        cursor: pointer;
         padding-top: 10px;
         padding-bottom: 7px;
+        // Inspired by http://line25.com/tutorials/how-to-create-a-cool-blog-post-date-icon-with-css
+        .date.hidden-phone {
+            .btn;
+            width: 70px;
+            height: 70px;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            font-size: 130%;
+            color: @black;
 
-        a {
-            text-decoration: none;
-            color: black;
+            .day, .month, .year {
+                display: block;
+                margin-top: 4px;
+            }
+
+            .day {
+                margin-top: 2px;
+            }
+
+            .year {
+                .muted;
+            }
         }
 
-            a:hover {
-                color: @linkColorHover;
+        .content {
+            h1 {
+                font-size: 120%;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: normal;
             }
 
-        .post {
-            .title {
-                font-weight: bold;
-            }
-            // Inspired by http://line25.com/tutorials/how-to-create-a-cool-blog-post-date-icon-with-css
             .date {
-                .btn;
-                .pull-left;
-                width: 70px;
-                height: 70px;
-                font-family: Helvetica, sans-serif;
-                text-align: center;
-                font-size: 130%;
-                color: @black;
-                margin-right: 10px;
-
-                .day, .month, .year {
-                    display: block;
-                    margin-top: 4px;
-                }
-
-                .day {
-                    margin-top: 2px;
-                }
-
-                .year {
-                    .muted;
-                }
-            }
-
-            .text {
-                .clearfix;
+                .muted;
+                margin-bottom: 1em;
             }
 
             .excerpt {
-                .muted;
+                color: @gray;
             }
         }
     }

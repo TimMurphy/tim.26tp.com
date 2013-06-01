@@ -24,7 +24,7 @@
     <![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="brand" href="/">{{ site.name }}</a>
                 <div class="pull-right">
                     <ul class="nav">
@@ -35,13 +35,18 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+
+    <div class="container">
+
         {{ content }}
-        <hr>
+
         <footer>
+            <hr>
             <p>&copy; {{ site.author }} 2013</p>
         </footer>
+
     </div>
+
     <script src="/assets/js/jquery-1.10.0.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script>
