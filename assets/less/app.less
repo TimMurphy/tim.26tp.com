@@ -1,29 +1,75 @@
-ul.posts {
-    list-style: none;
-    margin-left: 0;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #CCCCCC;
+@import "bootstrap.less";
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
-    ul.posts li {
+@import "responsive.less";
+
+@itemBorderColor: #ccc;
+
+ul.posts {
+    margin-left: 0;
+    list-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: @itemBorderColor;
+
+    li {
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: #CCCCCC;
+        border-bottom-color: @itemBorderColor;
         cursor: pointer;
         padding-top: 10px;
         padding-bottom: 7px;
-    }
 
-        ul.posts li a {
+        a {
             text-decoration: none;
             color: black;
         }
 
-            ul.posts li a:hover {
-                color: red;
+            a:hover {
+                color: @linkColorHover;
             }
 
-.post .title {
-    font-weight: bold;
+        .post {
+            .title {
+                font-weight: bold;
+            }
+            // Inspired by http://line25.com/tutorials/how-to-create-a-cool-blog-post-date-icon-with-css
+            .date {
+                .btn;
+                .pull-left;
+                width: 70px;
+                height: 70px;
+                font-family: Helvetica, sans-serif;
+                text-align: center;
+                font-size: 130%;
+                color: @black;
+                margin-right: 10px;
+
+                .day, .month, .year {
+                    display: block;
+                    margin-top: 4px;
+                }
+
+                .day {
+                    margin-top: 2px;
+                }
+
+                .year {
+                    .muted;
+                }
+            }
+
+            .text {
+                .clearfix;
+            }
+
+            .excerpt {
+                .muted;
+            }
+        }
+    }
 }
